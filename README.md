@@ -1,24 +1,60 @@
-# resource_creator_script
-This is a script to automate the creations of resources on google.
-# Course Structure Setup
+Overview
+This repository contains a script to create a customizable folder structure for various courses. The script is designed to help instructors quickly set up a structured environment for organizing course materials.
 
-## Overview
+Prerequisites
+Operating System: Compatible with Linux, macOS, and Windows (via Git  or WSL).
+: Ensure you have  installed. For Windows, use Git  or WSL.
+Git: Make sure git is installed for version control and cloning the repository.
+Getting Started
+Clone the Repository
+Open Your Terminal or Command Prompt.
 
-This repository contains a script to create a customizable folder structure for different courses. The structure includes folders for monthly content, weekly content, assignments, projects, and resources.
+Clone the Repository:
 
-## Getting Started
 
-### Prerequisites
 
-- Ensure you have `bash` installed (most Unix-like systems come with it, including macOS and Linux).
-- For Windows users, [Git Bash](https://git-scm.com/downloads) or [WSL](https://docs.microsoft.com/en-us/windows/wsl/) (Windows Subsystem for Linux) can be used to run the script.
+git clone https://github.com/yourusername/repository-name.git
+Navigate to the Repository Directory:
 
-### Usage
 
-1. **Clone the Repository**
 
-   Open a terminal and clone the repository:
+cd repository-name
+Customizing the Script
+Open the Script for Editing:
 
-   ```bash
-   git clone https://github.com/yourusername/repository-name.git
+Use a text editor to open create_course_structure.sh.
+Update the Folder Names:
 
+Modify the months and weeks arrays in the script to match your course structure. For example:
+
+
+
+months=("1_HTML_and_CSS" "2_Intermediate_CSS_and_JavaScript" "3_JavaScript_Deep_Dive_and_Git_GitHub" "4_React_and_Capstone_Project")
+weeks=("Week_1" "Week_2" "Week_3" "Week_4")
+Save the changes.
+
+Running the Script
+Make the Script Executable:
+
+
+
+chmod +x create_course_structure.sh
+Execute the Script:
+
+
+./create_course_structure.sh
+The script will create a folder structure in the directory where it's run, using the customized names.
+
+Integrating with Google Drive
+To integrate and upload the created structure to Google Drive, follow these steps:
+
+Using Google Drive Backup and Sync
+Install Google Drive Backup and Sync:
+
+Download and install Google Drive Backup and Sync from Google's website.
+Set Up Sync:
+
+Choose the folder where the course structure was created (e.g., ~/CourseStructure) to sync with your Google Drive.
+Verify Sync:
+
+Ensure the folders and files are uploaded to your Google Drive.
